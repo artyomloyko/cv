@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import { theme, type ThemeType } from '$lib/stores/theme';
+	import '@fontsource/fira-mono';
 	import '../app.css';
 
 	onMount(() => {
@@ -26,3 +27,9 @@
 </script>
 
 <slot />
+
+<style>
+	:global(body) {
+		font-family: 'Fira Mono', sans-serif;
+	}
+</style>

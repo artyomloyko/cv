@@ -1,57 +1,28 @@
 <script lang="ts">
-	import Header from './Header.svelte';
+	import { onMount } from 'svelte';
+	import { theme, type ThemeType } from '$lib/stores/theme';
 	import '../app.css';
 
-	let { children } = $props();
+	onMount(() => {
+		const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches
+			? 'dark'
+			: 'light';
+		const savedTheme = (localStorage.getItem('theme') || systemTheme) as ThemeType;
+		theme.set(savedTheme);
+
+		if (savedTheme === 'dark') {
+			document.documentElement.classList.add('dark');
+		}
+	});
+
+	$: if (typeof document !== 'undefined') {
+		if ($theme === 'dark') {
+			document.documentElement.classList.add('dark');
+		} else {
+			document.documentElement.classList.remove('dark');
+		}
+		localStorage.setItem('theme', $theme);
+	}
 </script>
 
-<div class="app">
-	<Header />
-
-	<main>
-		{@render children()}
-	</main>
-
-	<footer>
-		<p>
-			visit <a href="https://svelte.dev/docs/kit">svelte.dev/docs/kit</a> to learn about SvelteKit
-		</p>
-	</footer>
-</div>
-
-<style>
-	.app {
-		display: flex;
-		flex-direction: column;
-		min-height: 100vh;
-	}
-
-	main {
-		flex: 1;
-		display: flex;
-		flex-direction: column;
-		padding: 1rem;
-		width: 100%;
-		max-width: 64rem;
-		margin: 0 auto;
-		box-sizing: border-box;
-	}
-
-	footer {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		padding: 12px;
-	}
-
-	footer a {
-		font-weight: bold;
-	}
-
-	@media (min-width: 480px) {
-		footer {
-			padding: 12px 0;
-		}
-	}
-</style>
+<slot />

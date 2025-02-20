@@ -21,12 +21,12 @@ export const CV = {
 	title: 'Senior Frontend Engineer',
 	contacts: [
 		{ title: 'loiko.artyom@gmail.com', href: 'mailto:loiko.artyom@gmail.com', Icon: Mail },
-		{ title: 'artyomloyko.github.io', href: 'https://yourwebsite.com', Icon: Globe },
+		{ title: 'artyom.work', href: 'https://yourwebsite.com', Icon: Globe },
 		{ title: 'loiko-artyom', href: 'https://linkedin.com/in/loiko-artyom', Icon: Linkedin },
 		{ title: 't.me/loiko_artyom', href: 'https://t.me/loiko_artyom', Icon: Send },
 		{ title: 'artyomloyko', href: 'https://github.com/ArtyomLoyko', Icon: Github }
 	],
-	summary: `Senior Frontend Engineer with <span class="font-semibold text-foreground">${differenceInYears(new Date(), new Date(firstJobDateStart))}+ years</span> of experience specializing in building <span class="font-semibold text-foreground">scalable, high-performance web applications</span>. Expert in <span class="font-semibold text-foreground">React ecosystem</span> and <span class="font-semibold text-foreground">modern JavaScript</span>, with a strong focus on creating exceptional user experiences. Proven track record of delivering complex projects using <span class="font-semibold text-foreground">Next.js</span>, <span class="font-semibold text-foreground">TypeScript</span>, and <span class="font-semibold text-foreground">GraphQL</span>. Passionate about <span class="font-semibold text-foreground">web performance optimization</span> and implementing <span class="font-semibold text-foreground">best practices</span> in frontend architecture.`,
+	summary: `👋Skilled Frontend Engineer with <span class="font-semibold text-foreground">${differenceInYears(new Date(), new Date(firstJobDateStart))}+ years</span> of experience specializing in building <span class="font-semibold text-foreground">scalable, high-performance web applications</span>. Expert in <span class="font-semibold text-foreground">React ecosystem</span> and <span class="font-semibold text-foreground">modern JavaScript</span>, with a strong focus on creating exceptional user experiences. Proven track record of delivering complex projects using <span class="font-semibold text-foreground">Next.js</span>, <span class="font-semibold text-foreground">TypeScript</span>, and <span class="font-semibold text-foreground">GraphQL</span>. Passionate about <span class="font-semibold text-foreground">web performance optimization</span> and implementing <span class="font-semibold text-foreground">best practices</span> in frontend architecture.`,
 	skills: [
 		{
 			title: 'Stack',

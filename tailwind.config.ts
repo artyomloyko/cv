@@ -1,21 +1,5 @@
-// import type { Config } from 'tailwindcss';
+import type { Config } from 'tailwindcss';
 
-// export default {
-// 	content: ['./src/**/*.{html,js,svelte,ts}'],
-
-// 	theme: {
-// 		extend: {
-// 			colors: {
-// 				'main': '#8055a2'
-// 			}
-// 		}
-// 	},
-
-// 	plugins: []
-// } satisfies Config;
-
-
-/** @type {import('tailwindcss').Config} */
 export default {
   darkMode: 'class',
   content: ['./src/**/*.{html,js,svelte,ts}'],
@@ -64,4 +48,4 @@ export default {
     },
   },
   plugins: [],
-}
+} satisfies Config;

@@ -5,7 +5,7 @@
 	"type": "module",
 	"scripts": {
 		"dev": "vite dev",
-		"build": "vite build",
+		"build": "vite build & node generate-pdf.js",
 		"preview": "vite preview",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
@@ -37,6 +37,7 @@
 	"dependencies": {
 		"date-fns": "^4.1.0",
 		"lucide-svelte": "^0.474.0",
+		"puppeteer": "^24.2.1",
 		"tailwind-merge": "^2.6.0"
 	}
 }

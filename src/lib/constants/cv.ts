@@ -21,7 +21,7 @@ export const CV = {
 	title: 'Senior Frontend Engineer',
 	contacts: [
 		{ title: 'loiko.artyom@gmail.com', href: 'mailto:loiko.artyom@gmail.com', Icon: Mail },
-		{ title: 'artyom.work', href: 'https://yourwebsite.com', Icon: Globe },
+		{ title: 'artyom.work', href: 'https://artyom.work', Icon: Globe },
 		{ title: 'loiko-artyom', href: 'https://linkedin.com/in/loiko-artyom', Icon: Linkedin },
 		{ title: 't.me/loiko_artyom', href: 'https://t.me/loiko_artyom', Icon: Send },
 		{ title: 'artyomloyko', href: 'https://github.com/ArtyomLoyko', Icon: Github }

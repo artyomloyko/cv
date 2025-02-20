@@ -18,7 +18,7 @@
 			<!-- Header -->
 			<div class="flex w-full flex-col items-start justify-between border-b border-primary/20 pb-4">
 				<div class="inline-flex w-full justify-between">
-					<h1 class="text-3xl font-bold">{CV.name}</h1>
+					<h1 class="text-3xl font-bold">{CV.name}👨‍💻</h1>
 					<div class="inline-flex items-center gap-2 print:hidden">
 						<ThemeToggle />
 						<DownloadButton />
@@ -48,9 +48,9 @@
 
 			<!-- Professional Summary -->
 			<section>
-				<h3 class="mb-3 flex items-center gap-2 text-lg font-semibold text-foreground">
-					<Star class="h-5 w-5 text-primary" />
-					Professional Summary
+				<h3 class="mb-3 flex items-center gap-2 text-lg font-semibold">
+					<Star class="h-5 w-5" />
+					Summary
 				</h3>
 				<p class="leading-relaxed text-foreground/80">
 					{@html CV.summary}
@@ -59,11 +59,11 @@
 
 			<!-- Technical Skills -->
 			<section>
-				<h3 class="mb-4 flex items-center gap-2 text-lg font-semibold text-foreground">
-					<Laptop class="h-5 w-5 text-primary" />
+				<h3 class="mb-4 flex items-center gap-2 text-lg font-semibold">
+					<Laptop class="h-5 w-5" />
 					Technical Skills
 				</h3>
-				<div class="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
+				<div class="grid-container grid w-full grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-4">
 					{#each CV.skills as skill}
 						<div class="space-y-3">
 							<h4 class="flex items-center gap-2 font-medium text-foreground">
@@ -82,8 +82,8 @@
 
 			<!-- Professional Experience -->
 			<section>
-				<h3 class="mb-4 flex items-center gap-2 text-lg font-semibold text-foreground">
-					<Briefcase class="h-5 w-5 text-primary" />
+				<h3 class="mb-4 flex items-center gap-2 text-lg font-semibold">
+					<Briefcase class="h-5 w-5" />
 					Professional Experience
 				</h3>
 				<ol class="flex flex-col gap-10 border-s-2 border-primary/20">
@@ -142,16 +142,22 @@
 <style>
 	@media print {
 		@page {
-			size: auto;
-			margin: 5mm;
+			size: 1000px 1500px;
+			margin: 0;
 		}
 
 		.cv-content {
-			zoom: 80%;
+			margin: 10mm;
 			visibility: visible;
 			position: fixed;
 			left: 0;
 			top: 0;
+			visibility: visible;
+		}
+
+		.grid-container {
+			display: grid !important;
+			grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
 		}
 	}
 </style>
